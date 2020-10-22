@@ -2,6 +2,7 @@ package edu.cnm.deepdive.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.util.List;
 
 public class Entity {
 
@@ -14,7 +15,7 @@ public class Entity {
   private String ddl;
 
   @Expose
-  private Index[] indices;
+  private List<Index> indices;
 
   public String getName() {
     return name;
@@ -32,12 +33,11 @@ public class Entity {
     this.ddl = ddl;
   }
 
-  public Index[] getIndices() {
+  public List<Index> getIndices() {
     return indices;
   }
 
-  public void setIndices(Index[] indices) {
+  public void setIndices(List<Index> indices) {
     this.indices = indices;
   }
-
 }
